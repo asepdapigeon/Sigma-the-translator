@@ -24,15 +24,15 @@ VARIABLE KEY
 '''
 
 
-MORSE_CODE_DICT = { 'A':'.-', 'B':'-...', 
-					'C':'-.-.', 'D':'-..', 'E':'.', 
-					'F':'..-.', 'G':'--.', 'H':'....', 
-					'I':'..', 'J':'.---', 'K':'-.-', 
-					'L':'.-..', 'M':'--', 'N':'-.', 
-					'O':'---', 'P':'.--.', 'Q':'--.-', 
-					'R':'.-.', 'S':'...', 'T':'-', 
-					'U':'..-', 'V':'...-', 'W':'.--', 
-					'X':'-..-', 'Y':'-.--', 'Z':'--..', 
+MORSE_CODE_DICT = { 'a':'.-', 'b':'-...', 
+					'c':'-.-.', 'd':'-..', 'e':'.', 
+					'f':'..-.', 'g':'--.', 'h':'....', 
+					'i':'..', 'j':'.---', 'k':'-.-', 
+					'l':'.-..', 'm':'--', 'n':'-.', 
+					'o':'---', 'p':'.--.', 'q':'--.-', 
+					'r':'.-.', 's':'...', 't':'-', 
+					'u':'..-', 'v':'...-', 'w':'.--', 
+					'x':'-..-', 'y':'-.--', 'z':'--..', 
 					'1':'.----', '2':'..---', '3':'...--', 
 					'4':'....-', '5':'.....', '6':'-....', 
 					'7':'--...', '8':'---..', '9':'----.', 
@@ -47,58 +47,36 @@ def clearAll() :
 	language2_field.delete(1.0, END)
 
 
-<<<<<<< Tabnine <<<<<<<
 def convert() :
-    """#+
-    This function converts the input message from the selected language to the target language.#+
 
-    Parameters:#+
-    None#+
 
-	message = language1_field.get("1.0", "end")[:-1]#-
-    Returns:#+
-    None#+
+	message = language1_field.get("1.0", "end")[:-1]
 
-    The function first retrieves the input message from the language1_field. It then checks if the selected languages for translation are the same. If they are, it displays an error message and returns. If the selected languages are different, it checks if the selected languages are English and Morse code. If they are, it encrypts the input message using the encrypt function and assigns the result to the variable 'rslt'. If the selected languages are Morse code and English, it decrypts the input message using the decrypt function and assigns the result to the variable 'rslt'. If the selected languages are neither English and Morse code, it displays an error message and returns. Finally, it inserts the result into the language2_field.#+
-    """#+
-    message = language1_field.get("1.0", "end")[:-1]#+
 
-	if variable1.get() == variable2.get() :#-
-    if variable1.get() == variable2.get() :#+
-        messagebox.showerror("Can't Be the same Language")#+
-        return#+
+	if variable1.get() == variable2.get() :
 
-    elif variable1.get() == "Eng" and variable2.get() == "Morse" :#+
-        rslt = encrypt(message)#+
 
-		messagebox.showerror("Can't Be the same Language")#-
-		return#-
-    elif variable1.get() == "Morse" and variable2.get() == "Eng" :#+
-        rslt = decrypt(message)#+
+		messagebox.showerror("Can't Be the same Language")
+		return
 
-	elif variable1.get() == "Eng" and variable2.get() == "Morse" :#-
-    else :#+
-        messagebox.showerror("please choose valid language code..")#+
-        return#+
+	elif variable1.get() == "Eng" and variable2.get() == "Morse" :
 
-#-
-		rslt = encrypt(message)#-
-#-
-	elif variable1.get() == "Morse" and variable2.get() == "Eng" :#-
-#-
-#-
-		rslt = decrypt(message)#-
-#-
-	else :#-
-#-
-#-
-		messagebox.showerror("please choose valid language code..")#-
-		return#-
-#-
-#-
-	language2_field.insert('end -1 chars', rslt)#-
-    language2_field.insert('end -1 chars', rslt)#+
->>>>>>> Tabnine >>>>>>># {"conversationId":"fcea9b71-a236-48f5-88fc-482eb79aa77a","source":"instruct"}
+
+		rslt = encrypt(message)
+
+	elif variable1.get() == "Morse" and variable2.get() == "Eng" :
+
+
+		rslt = decrypt(message)
+
+	else :
+
+
+		messagebox.showerror("please choose valid language code..")
+		return
+
+
+	language2_field.insert('end -1 chars', rslt)
 	
 		
 
@@ -164,7 +142,7 @@ if __name__ == "__main__" :
 
 	root.title("Sigma: The Morse Code Translator")
 
-	headlabel = Label(root, text = 'Translator menu | The Text Needs To Be Capitalized!', 
+	headlabel = Label(root, text = 'Translator menu | The Text cannot be Capitalized!', 
 							fg = 'black', bg = "pink") 
 
 
